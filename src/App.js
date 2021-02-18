@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import Register from "./components/Register";
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+
+
+const Container = styled.div`
+  background-color: #fff;
+  min-height: 100vh;  
+`
+
+const ToolBar = styled(Toolbar)`
+  display: flex;
+  justify-content: space-between;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <AppBar position="static" style={{backgroundColor: 'transparent', color: '#333'}}>
+        <ToolBar>
+          
+          <Typography variant="h6" >
+            eLearning
+          </Typography>
+          
+        </ToolBar>
+      </AppBar>
+      <Register />
+    </Container>
   );
 }
 
